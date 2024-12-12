@@ -1,0 +1,14 @@
+sharding:
+  configDB: configReplSet/${CONFIG_SERVER}:${CONFIG_PORT}
+
+net:
+  bindIp: 0.0.0.0
+  port: ${MONGOS_PORT}
+
+systemLog:
+  destination: file
+  path: /logs/mongos.log
+  logAppend: true
+
+processManagement:
+  fork: true
